@@ -43,3 +43,21 @@
   <script src="<?= base_url('public/frontend/js/script.js'); ?>"></script>
   <script src="<?= base_url('public/frontend/js/shuffle.min.js'); ?>"></script>
   <script src="<?= base_url('public/frontend/js/slick.min.js'); ?>"></script>
+
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\hope-ui.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\apexcharts.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\dashboard.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\vectore-chart.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\widgetcharts.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\external.min.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\libs.min.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\calender.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\circle-progress.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\countdown.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\flatpickr.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\form-wizard.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\fslightbox.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\kanban.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\prism.mini.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\setting.js'); ?>"></script>
+  <script src="<?= base_url('public\admin_panel\dist\assets\js\slider-tabs.js'); ?>"></script>

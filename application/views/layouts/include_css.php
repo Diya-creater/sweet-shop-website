@@ -27,4 +27,21 @@
 <link rel="stylesheet" href="<?= base_url('public/frontend/css/slick.css'); ?>">  
 <link rel="stylesheet" href="<?= base_url('public/frontend/css/slick-theme.css'); ?>">  
 <link rel="stylesheet" href="<?= base_url('public/frontend/css/style.css'); ?>"> 
-<link rel="stylesheet" href="<?= base_url('public/frontend/css/style.css.map'); ?>">
+
+
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\custom.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\custom.min.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\customizer.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\customizer.min.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\dark.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\dark.min.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\hope-ui.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\hope-ui.min.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\rtl.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\rtl.min.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\libs.min.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\custom.min.css.map.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\customizer.min.css.map.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\dark.min.css.map.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\hope-ui.min.css.map.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('public\admin_panel\dist\assets\css\rtl.min.css.map.css'); ?>">
