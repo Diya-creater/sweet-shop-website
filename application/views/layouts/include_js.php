@@ -61,3 +61,39 @@
   <script src="<?= base_url('public\admin_panel\dist\assets\js\prism.mini.js'); ?>"></script>
   <script src="<?= base_url('public\admin_panel\dist\assets\js\setting.js'); ?>"></script>
   <script src="<?= base_url('public\admin_panel\dist\assets\js\slider-tabs.js'); ?>"></script>
+
+
+  
+
+    <!-- Library Bundle Script -->
+    <script src="../public/admin_panel/dist/assets/js/core/libs.min.js"></script>
+    
+    <!-- External Library Bundle Script -->
+    <script src="../public/admin_panel/dist/assets/js/core/external.min.js"></script>
+    
+    <!-- Widgetchart Script -->
+    <script src="../public/admin_panel/dist/assets/js/charts/widgetcharts.js"></script>
+    
+    <!-- mapchart Script -->
+    <script src="../public/admin_panel/dist/assets/js/charts/vectore-chart.js"></script>
+    <script src="../public/admin_panel/dist/assets/js/charts/dashboard.js" ></script>
+    
+    <!-- fslightbox Script -->
+    <script src="../public/admin_panel/dist/assets/js/plugins/fslightbox.js"></script>
+    
+    <!-- Settings Script -->
+    <script src="../public/admin_panel/dist/assets/js/plugins/setting.js"></script>
+    
+    <!-- Slider-tab Script -->
+    <script src="../public/admin_panel/dist/assets/js/plugins/slider-tabs.js"></script>
+    
+    <!-- Form Wizard Script -->
+    <script src="../public/admin_panel/dist/assets/js/plugins/form-wizard.js"></script>
+    
+    <!-- AOS Animation Plugin-->
+    <script src="../public/admin_panel/dist/assets/vendor/aos/dist/aos.js"></script>
+    
+    <!-- App Script -->
+    <script src="../public/admin_panel/dist/assets/js/hope-ui.js" defer></script>
+    
+    

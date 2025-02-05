@@ -63,8 +63,11 @@ $route['admin_sliders']='admin/admin_sliders';
 $route['admin_sliders_add']='admin/admin_sliders/add';
 $route['admin_categories']='admin/admin_categories_controller';
 $route['admin_categories_add']='admin/admin_categories_controller/add';
+$route['admin_product']='admin/admin_product_controller/index';
+$route['admin_products_add']='admin/admin_product_controller/add';
 
 $route['home_screen']='frontend/frontend_home_screen';
 $route['frontend_login']='frontend/frontend_login_controller';
 $route['frontend_register']='frontend/frontend_register_controller';
 $route['frontend_home_screen']='frontend/frontend_home_screen';
+$route['frontend_product1/(:num)']='frontend/frontend_product_controller/index/$1';

@@ -18,7 +18,7 @@ class admin_categories_controller extends CI_Controller
        $this->categories = new Categories;
        $data['categories'] = $this->categories->get_categories();
 
-       $this->load->view('admin/admin_categories',$data);
+       $this->load->view('admin/admin_categories_new',$data);
     }
     public function get_categories_list()
     {
@@ -43,6 +43,7 @@ class admin_categories_controller extends CI_Controller
                 $this->session->set_flashdata('fail', 'Registration failed. Please try again.');
                 redirect(base_url('admin_categories'));
             }
+            redirect('admin_product_controller/index');
 
     }
 

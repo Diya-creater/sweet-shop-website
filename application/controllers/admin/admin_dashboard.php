@@ -14,7 +14,7 @@ class admin_dashboard extends CI_Controller
     
         public function index()
     {
-        $this->load->view('admin/admin_dashboard');
+        $this->load->view('admin/admin_dashboard_new');
     }
     
     

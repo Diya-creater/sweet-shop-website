@@ -18,7 +18,7 @@ class admin_sliders extends CI_Controller
        $this->slider = new Slider;
        $data['sliders'] = $this->slider->get_sliders();
 
-       $this->load->view('admin/admin_sliders',$data);
+       $this->load->view('admin/admin_sliders_new',$data);
     }
     public function get_slider_list()
     {

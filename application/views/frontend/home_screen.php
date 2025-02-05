@@ -23,6 +23,134 @@ FACEBOOK: https://www.facebook.com/themefisher
 <html lang="en">
 <head>
 
+<style>
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+
+}
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: rgb(118, 233, 118);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25 rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.wrapper i:first-child {
+    left: -22px;
+
+}
+
+.wrapper i:last-child {
+    right: -22px;
+
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 340px;
+    list-style: none;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    width: 98%;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card .img {
+    background: green;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.card span {
+    color: #6a6d78;
+    font-size: 1.31rem;
+
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+
+    }
+}
+
+</style>
+
   <!-- Basic Page Needs
 ================================================== -->
   <meta charset="utf-8">
@@ -36,9 +164,13 @@ FACEBOOK: https://www.facebook.com/themefisher
   <meta name=author content="Themefisher">
   <meta name=generator content="Themefisher Constra HTML Template v1.0">
 
+
+  <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
   <!-- Favicon
 ================================================== -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/jpg" href="<?=base_url("C:\Project img\Sweets\IMG.jpg")?>">
 
   <!-- CSS
 ================================================== -->
@@ -60,197 +192,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 <body>
   <div class="body-inner">
 
-    <div id="top-bar" class="top-bar">
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-md-8">
-                <ul class="top-info text-center text-md-left">
-                    <li><i class="fas fa-map-marker-alt"></i> <p class="info-text">9051 Constra Incorporate, USA</p>
-                    </li>
-                </ul>
-              </div>
-              <!--/ Top info end -->
-  
-              <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
-                <ul class="list-unstyled">
-                    <li>
-                      <a title="Facebook" href="https://facebbok.com/themefisher.com">
-                          <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
-                      </a>
-                      <a title="Twitter" href="https://twitter.com/themefisher.com">
-                          <span class="social-icon"><i class="fab fa-twitter"></i></span>
-                      </a>
-                      <a title="Instagram" href="https://instagram.com/themefisher.com">
-                          <span class="social-icon"><i class="fab fa-instagram"></i></span>
-                      </a>
-                      <a title="Linkdin" href="https://github.com/themefisher.com">
-                          <span class="social-icon"><i class="fab fa-github"></i></span>
-                      </a>
-                    </li>
-                </ul>
-              </div>
-              <!--/ Top social end -->
-          </div>
-          <!--/ Content row end -->
-        </div>
-        <!--/ Container end -->
-    </div>
-    <!--/ Topbar end -->
-<!-- Header start -->
-<header id="header" class="header-one">
-  <div class="bg-white">
-    <div class="container">
-      <div class="logo-area">
-          <div class="row align-items-center">
-            <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                <a class="d-block" href="index.html">
-                  <img loading="lazy" src="images/logo.png" alt="Constra">
-                </a>
-            </div><!-- logo end -->
-  
-            <div class="col-lg-9 header-right">
-                <ul class="top-info-box">
-                  <li>
-                    <div class="info-box">
-                      <div class="info-box-content">
-                          <p class="info-box-title">Call Us</p>
-                          <p class="info-box-subtitle">(+9) 847-291-4353</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="info-box">
-                      <div class="info-box-content">
-                          <p class="info-box-title">Email Us</p>
-                          <p class="info-box-subtitle">office@Constra.com</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="last">
-                    <div class="info-box last">
-                      <div class="info-box-content">
-                          <p class="info-box-title">Global Certificate</p>
-                          <p class="info-box-subtitle">ISO 9001:2017</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="header-get-a-quote">
-                  <a class="btn btn-primary" href="<?=base_url("frontend_login")?>">Login</a>
-                  <a class="btn btn-primary" href="<?=base_url("frontend_register")?>">Register</a>
-
-                  </li>
-                </ul><!-- Ul end -->
-            </div><!-- header right end -->
-          </div><!-- logo area end -->
-  
-      </div><!-- Row end -->
-    </div><!-- Container end -->
-  </div>
-
-  <div class="site-navigation">
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-
-               
-                <div id="navbar-collapse" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav mr-auto">
-                      <!-- <li class="nav-item dropdown active">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop All <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li class="active"><a href="index.html">Home One</a></li>
-                            <li><a href="index-2.html">Home Two</a></li>
-                          </ul>
-                      </li>
-
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sweeets <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="about.html">Barfi</a></li>
-                            <li><a href="team.html">mysur pak</a></li>
-                            <li><a href="testimonials.html">Testimonials</a></li>
-                            <li><a href="faq.html">Faq</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
-                          </ul>
-                      </li>
-              
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="projects.html">Projects All</a></li>
-                            <li><a href="projects-single.html">Projects Single</a></li>
-                          </ul>
-                      </li>
-              
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="services.html">Services All</a></li>
-                            <li><a href="service-single.html">Services Single</a></li>
-                          </ul>
-                      </li>
-              
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="404.html">404</a></li>
-                            <li class="dropdown-submenu">
-                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Parent Menu</a>
-                                <ul class="dropdown-menu">
-                                  <li><a href="#!">Child Menu 1</a></li>
-                                  <li><a href="#!">Child Menu 2</a></li>
-                                  <li><a href="#!">Child Menu 3</a></li>
-                                </ul>
-                            </li>
-                          </ul>
-                      </li>
-              
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
-                            <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
-                            <li><a href="news-single.html">News Single</a></li>
-                          </ul>
-                      </li>
-               -->
-
-               
-               <?php foreach ($categories as  $category) : ?>
-                  <li class="nav-item"><a class="nav-link" href="contact.html"><?=$category->name?></a></li>
-
-                <?php endforeach;?>                    </ul>
-                </div>
-              </nav>
-          </div>
-          <!--/ Col end -->
-        </div>
-        <!--/ Row end -->
-
-        <div class="nav-search">
-          <span id="search"><i class="fa fa-search"></i></span>
-        </div><!-- Search end -->
-
-        <div class="search-block" style="display: none;">
-          <label for="search-field" class="w-100 mb-0">
-            <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter">
-          </label>
-          <span class="search-close">&times;</span>
-        </div><!-- Site search end -->
-    </div>
-    <!--/ Container end -->
-
-  </div>
-  <!--/ Navigation end -->
-</header>
-<!--/ Header end -->
-
+<?php $this->load->view('frontend/frontend_navbar');?>
 <div class="banner-carousel banner-carousel-1 mb-0">
 
 <?php foreach ($sliders as  $slider) : ?>
@@ -274,131 +216,29 @@ FACEBOOK: https://www.facebook.com/themefisher
 <?php endforeach; ?>
 
 </div>
+<div class="wrapper">
 
-<section class="call-to-action-box no-padding">
-  <div class="container">
-    <div class="action-style-box">
-        <div class="row align-items-center">
-          <div class="col-md-8 text-center text-md-left">
-              <div class="call-to-action-text">
-                <h3 class="action-title">We understand your needs on construction</h3>
-              </div>
-          </div><!-- Col end -->
-          <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
-              <div class="call-to-action-btn">
-                <a class="btn btn-dark" href="#">Request Quote</a>
-              </div>
-          </div><!-- col end -->
-        </div><!-- row end -->
-    </div><!-- Action style box -->
-  </div><!-- Container end -->
-</section><!-- Action end -->
 
-<section id="ts-features" class="ts-features">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-          <div class="ts-intro">
-              <h2 class="into-title">About Us</h2>
-              <h3 class="into-sub-title">We deliver landmark projects</h3>
-              <p>We are rethoric question ran over her cheek When she reached the first hills of the Italic Mountains,
-                she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village
-                and the subline of her own road, the Line Lane.</p>
-          </div><!-- Intro box end -->
+        <i id="left" class="fa-solid  fas fa-angle-left"></i>
+        <ul class="carousel">
 
-          <div class="gap-20"></div>
+        <?php foreach ($categories as $key => $category) { ?>
+          <a  href="<?=base_url("frontend_product1/".$category->id)?>">
+          <li class="card">
+                <div class="img"><img src="<?=base_url('public/uploads/categories/'.$category->file)?>"   alt="" draggable="false"> </div>
+                <h2 style="color: green; font-weight:bold;">
+                      <?=$category->name?>
+                  </h2>
+                </li>      
+              </a>
+             <?php } ?>
+           
+           
+        </ul>
+        <i id="right" class="fa-solid fas fa-angle-right"></i>
+    </div>
 
-          <div class="row">
-              <div class="col-md-6">
-                <div class="ts-service-box">
-                    <span class="ts-service-icon">
-                      <i class="fas fa-trophy"></i>
-                    </span>
-                    <div class="ts-service-box-content">
-                      <h3 class="service-box-title">We've Repution for Excellence</h3>
-                    </div>
-                </div><!-- Service 1 end -->
-              </div><!-- col end -->
 
-              <div class="col-md-6">
-                <div class="ts-service-box">
-                    <span class="ts-service-icon">
-                      <i class="fas fa-sliders-h"></i>
-                    </span>
-                    <div class="ts-service-box-content">
-                      <h3 class="service-box-title">We Build Partnerships</h3>
-                    </div>
-                </div><!-- Service 2 end -->
-              </div><!-- col end -->
-          </div><!-- Content row 1 end -->
-
-          <div class="row">
-              <div class="col-md-6">
-                <div class="ts-service-box">
-                    <span class="ts-service-icon">
-                      <i class="fas fa-thumbs-up"></i>
-                    </span>
-                    <div class="ts-service-box-content">
-                      <h3 class="service-box-title">Guided by Commitment</h3>
-                    </div>
-                </div><!-- Service 1 end -->
-              </div><!-- col end -->
-
-              <div class="col-md-6">
-                <div class="ts-service-box">
-                    <span class="ts-service-icon">
-                      <i class="fas fa-users"></i>
-                    </span>
-                    <div class="ts-service-box-content">
-                      <h3 class="service-box-title">A Team of Professionals</h3>
-                    </div>
-                </div><!-- Service 2 end -->
-              </div><!-- col end -->
-          </div><!-- Content row 1 end -->
-        </div><!-- Col end -->
-
-        <div class="col-lg-6 mt-4 mt-lg-0">
-          <h3 class="into-sub-title">Our Values</h3>
-          <p>Minim Austin 3 wolf moon scenester aesthetic, umami odio pariatur bitters. Pop-up occaecat taxidermy street art, tattooed beard literally.</p>
-
-          <div class="accordion accordion-group" id="our-values-accordion">
-              <div class="card">
-                <div class="card-header p-0 bg-transparent" id="headingOne">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Safety
-                      </button>
-                    </h2>
-                </div>
-              
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#our-values-accordion">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
-                    </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header p-0 bg-transparent" id="headingTwo">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Customer Service
-                      </button>
-                    </h2>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#our-values-accordion">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
-                    </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header p-0 bg-transparent" id="headingThree">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Integrity
-                      </button>
-                    </h2>
-                </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#our-values-accordion">
                     <div class="card-body">
                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
@@ -937,6 +777,92 @@ FACEBOOK: https://www.facebook.com/themefisher
   </div>
   <!--/ Container end -->
 </section>
+
+<script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.querySelector(".carousel");
+    const arrowBtns = document.querySelectorAll(".wrapper i");
+    const wrapper = document.querySelector(".wrapper");
+
+    const firstCard = carousel.querySelector(".card");
+    const firstCardWidth = firstCard.offsetWidth;
+
+    let isDragging = false,
+        startX,
+        startScrollLeft,
+        timeoutId;
+
+    const dragStart = (e) => { 
+        isDragging = true;
+        carousel.classList.add("dragging");
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+    };
+
+    const dragging = (e) => {
+        if (!isDragging) return;
+    
+        // Calculate the new scroll position
+        const newScrollLeft = startScrollLeft - (e.pageX - startX);
+    
+        // Check if the new scroll position exceeds 
+        // the carousel boundaries
+        if (newScrollLeft <= 0 || newScrollLeft >= 
+            carousel.scrollWidth - carousel.offsetWidth) {
+            
+            // If so, prevent further dragging
+            isDragging = false;
+            return;
+        }
+    
+        // Otherwise, update the scroll position of the carousel
+        carousel.scrollLeft = newScrollLeft;
+    };
+
+    const dragStop = () => {
+        isDragging = false; 
+        carousel.classList.remove("dragging");
+    };
+
+    const autoPlay = () => {
+    
+        // Return if window is smaller than 800
+        if (window.innerWidth < 800) return; 
+        
+        // Calculate the total width of all cards
+        const totalCardWidth = carousel.scrollWidth;
+        
+        // Calculate the maximum scroll position
+        const maxScrollLeft = totalCardWidth - carousel.offsetWidth;
+        
+        // If the carousel is at the end, stop autoplay
+        if (carousel.scrollLeft >= maxScrollLeft) return;
+        
+        // Autoplay the carousel after every 2500ms
+        timeoutId = setTimeout(() => 
+            carousel.scrollLeft += firstCardWidth, 2500);
+    };
+
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("mousemove", dragging);
+    document.addEventListener("mouseup", dragStop);
+    wrapper.addEventListener("mouseenter", () => 
+        clearTimeout(timeoutId));
+    wrapper.addEventListener("mouseleave", autoPlay);
+
+    // Add event listeners for the arrow buttons to 
+    // scroll the carousel left and right
+    arrowBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            carousel.scrollLeft += btn.id === "left" ? 
+                -firstCardWidth : firstCardWidth;
+        });
+    });
+});
+
+</script>
 <!--/ News end -->
 
   <footer id="footer" class="footer bg-overlay">
