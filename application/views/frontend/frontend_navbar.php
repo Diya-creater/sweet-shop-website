@@ -258,6 +258,7 @@
     </div><!-- Container end -->
   </div>
 
+
   <div class="site-navigation">
     <div class="container">
         <div class="row">
@@ -267,76 +268,53 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
-
-               
                 <div id="navbar-collapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav mr-auto">
-                      <!-- <li class="nav-item dropdown active">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop All <i class="fa fa-angle-down"></i></a>
+                      <li class="nav-item dropdown active">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
                             <li class="active"><a href="index.html">Home One</a></li>
                             <li><a href="index-2.html">Home Two</a></li>
                           </ul>
                       </li>
 
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sweeets <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="about.html">Barfi</a></li>
-                            <li><a href="team.html">mysur pak</a></li>
-                            <li><a href="testimonials.html">Testimonials</a></li>
-                            <li><a href="faq.html">Faq</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
-                          </ul>
-                      </li>
-              
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="projects.html">Projects All</a></li>
-                            <li><a href="projects-single.html">Projects Single</a></li>
-                          </ul>
-                      </li>
-              
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="services.html">Services All</a></li>
-                            <li><a href="service-single.html">Services Single</a></li>
-                          </ul>
-                      </li>
-              
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="404.html">404</a></li>
-                            <li class="dropdown-submenu">
-                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Parent Menu</a>
-                                <ul class="dropdown-menu">
-                                  <li><a href="#!">Child Menu 1</a></li>
-                                  <li><a href="#!">Child Menu 2</a></li>
-                                  <li><a href="#!">Child Menu 3</a></li>
-                                </ul>
-                            </li>
-                          </ul>
-                      </li>
-              
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
-                            <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
-                            <li><a href="news-single.html">News Single</a></li>
-                          </ul>
-                      </li>
-               -->
 
-               
-               <!-- <?php foreach ($categories as  $category) : ?>
-                  <li class="nav-item"><a class="nav-link" href="contact.html"><?=$category->name?></a></li>
+                      <?php
+                      foreach ($categories as $key => $category) {
+                        
+                        if(count($category['subcategories'])>0){ ?>
 
-                <?php endforeach;?>                    </ul> -->
+                     
+
+                              <li class="nav-item dropdown active">
+                                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><?=$category['name']?> <i class="fa fa-angle-down"></i></a>
+                                      <ul class="dropdown-menu" role="menu">
+                                      <?php
+                                      foreach ($category['subcategories'] as $key => $value) { ?>
+                                        <li class="active"><a href="index.html"><?=$value['name']?></a></li>
+                                        
+                                        <?php    }
+                                      ?>
+                                      </ul>
+                              </li>
+
+
+                        <?php   } else { ?>
+                            <li class="nav-item">
+                            <a class="nav-link" href="<?=base_url('frontend_product1/'.$category['id'])?>"><?=$category['name']?></a>
+                          </li> 
+
+                          <?php } }?>
+                    
+                          
+
+
+
+
+                  
+
+                  
+                    </ul>
                 </div>
               </nav>
           </div>
@@ -352,7 +330,7 @@
           <label for="search-field" class="w-100 mb-0">
             <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter">
           </label>
-          <span class="search-close">&times;</span>
+          <span class="search-close">×</span>
         </div><!-- Site search end -->
     </div>
     <!--/ Container end -->

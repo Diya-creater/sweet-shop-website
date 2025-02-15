@@ -42,13 +42,12 @@
             
             <li class="menu-header">Starter</li>
             <li><a class="nav-link" href="<?=base_url('admin_categories')?>"><i class="far fa-square"></i> <span>Category</span></a></li>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="layout-default.html">Sweets</a></li>
-                <li><a class="nav-link" href="layout-transparent.html">Namkeens </a></li>
-                <li><a class="nav-link" href="layout-top-navigation.html">Dry fruits</a></li>
-                <li><a class="nav-link" href="layout-top-navigation.html">Gifting</a></li>
-              </ul>
+              <ul>
+</ul>
             </li>
+            <li>
+            <li><a class="nav-link" href="<?=base_url('admin_subcategories')?>"><i class="far fa-square"></i> <span>Subcategory</span></a></li>
+</li>
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Layout</span></a>
             <li><a class="nav-link" href="<?=base_url('admin_product')?>"><i class="far fa-square"></i> <span>Products</span></a></li>
             <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Slider</span></a></li>

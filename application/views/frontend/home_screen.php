@@ -6,7 +6,7 @@
 -->
 
 <!-- 
-THEME: Constra - Construction Html5 Template
+THEME: Constra - Construction Html5 Templat
 VERSION: 1.0.0
 AUTHOR: Themefisher
 
@@ -216,18 +216,26 @@ FACEBOOK: https://www.facebook.com/themefisher
 <?php endforeach; ?>
 
 </div>
-<div class="wrapper">
 
-
+       <div class="wrapper">
         <i id="left" class="fa-solid  fas fa-angle-left"></i>
         <ul class="carousel">
 
-        <?php foreach ($categories as $key => $category) { ?>
-          <a  href="<?=base_url("frontend_product1/".$category->id)?>">
+        <?php $i=0?>
+        <?php foreach ($categories as $key => $category) {
+          $i++;
+
+          if($i==4){
+            break;
+          }
+          ?>
+
+          <a  href="<?=base_url("frontend_product1/".$category['id'])?>">
+
           <li class="card">
-                <div class="img"><img src="<?=base_url('public/uploads/categories/'.$category->file)?>"   alt="" draggable="false"> </div>
-                <h2 style="color: green; font-weight:bold;">
-                      <?=$category->name?>
+                <div class="img"><img src="<?=base_url('public/uploads/categories/'.$category['file'])?>"   alt="" draggable="false"> </div>
+                <h2 style="color: Maroon; font-weight:bold;">
+                      <?=$category['name']?>
                   </h2>
                 </li>      
               </a>
